@@ -1,0 +1,30 @@
+{
+  "name": "jobcan_slack_electron",
+  "productName": "jobcan_slack_electron",
+  "description": "My Electron application description",
+  "keywords": [],
+  "main": "./main.js",
+  "version": "1.0.0",
+  "author": "upinetree",
+  "private": true,
+  "build": {
+    "appId": "com.electron.jobcanslack",
+    "mac": {
+      "category": "public.app-category.developer-tools"
+    }
+  },
+  "scripts": {
+    "start": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
+  },
+  "dependencies": {
+    "axios": "*",
+    "js-yaml": "*",
+    "lodash.sample": "*"
+  },
+  "devDependencies": {
+    "electron": "8.0.1",
+    "electron-builder": "^22.3.2"
+  }
+}

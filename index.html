@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <style>
+      body {
+        overflow: hidden;
+      }
+      .center {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 500px;
+      }
+      .result-image {
+        display: block;
+        width: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="root" class="center"></div>
+    <script>
+      require("./renderer.js");
+    </script>
+  </body>
+</html>
