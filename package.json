@@ -10,7 +10,8 @@
   "build": {
     "appId": "com.electron.jobcanslack",
     "mac": {
-      "category": "public.app-category.developer-tools"
+      "category": "public.app-category.developer-tools",
+      "target": "dir"
     }
   },
   "scripts": {
