@@ -1,6 +1,7 @@
 # Jobcan Slack Electorn
 
 ジョブカン打刻を実行するアプリケーション。
+今のところは macOS のみ対応。
 
 ## 機能
 
@@ -11,7 +12,8 @@
 
 ### ダウンロード
 
-[Releases](https://github.com/upinetree/jobcan_slack_electron/releases) から最新版の `.app` ファイルをダウンロード。
+[Releases](https://github.com/upinetree/jobcan_slack_electron/releases) から最新版の `.dmg` ファイルをダウンロード。
+展開して任意のディレクトリに配置してください。
 
 ### 設定
 
@@ -54,4 +56,14 @@ $ yarn start
 $ yarn dist
 ```
 
-で `dist/mac` に `.app` ファイルが作成される。
+で `dist/` に `.dmg` ファイルが作成される。
+
+タグを打って push すると GitHub Actions で自動的にリリースが作成される。
+タグの値は package.json の version の値と一致させる。
+
+```
+$ git tag -a v1.0.0 -m "Frist release 🎉"
+$ git push origin v1.0.0
+```
+
+Draft 状態になっているので、よさそうなら publish する。
