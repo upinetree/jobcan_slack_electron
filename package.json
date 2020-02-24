@@ -11,7 +11,7 @@
     "appId": "com.electron.jobcanslack",
     "mac": {
       "category": "public.app-category.developer-tools",
-      "target": "dir"
+      "target": "dmg"
     }
   },
   "scripts": {
