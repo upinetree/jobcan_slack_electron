@@ -59,7 +59,7 @@ function jobcanTouch(channel, token) {
 }
 
 function jobcanWorktime(channel, token) {
-  return jobcanCommand("jobcan_worktime", channel, token);
+  return channel && jobcanCommand("jobcan_worktime", channel, token);
 }
 
 function sleep(ms) {
@@ -78,9 +78,9 @@ function loadConfig() {
 
 const allowedExtensions = /.+\.(png|jpg|jpeg|gif)/;
 
-const touchStrategy = async ({ channel, token }) => {
+const touchStrategy = async ({ channel, worktimeChannel, token }) => {
   await jobcanTouch(channel, token);
-  await jobcanWorktime(channel, token);
+  await jobcanWorktime(worktimeChannel, token);
   await sleep(3000);
   const state = await getLastMessage(channel, token).then(text =>
     text.match(/勤務中/) ? "start" : "finish"

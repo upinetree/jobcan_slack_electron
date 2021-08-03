@@ -21,7 +21,8 @@
 
 ```yaml
 token: レガシートークン
-channel: チャンネル ID (not チャンネル名）
+channel: 打刻チャンネル ID (not チャンネル名）
+worktimeChannel: 労働時間確認チャンネル ID (not チャンネル名）
 dryrun: true なら実際の打刻を行わない（動作確認、画像確認用）
 ```
 
